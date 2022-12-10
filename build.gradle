@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://repo.e-iceblue.cn/repository/maven-public/"
+        content {
+            includeGroup 'e-iceblue'
+        }
+    }
+}
+
+dependencies {
+    implementation group: 'e-iceblue', name: 'spire.pdf', version: '8.11.8'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.2'
+}
+
+test {
+    useJUnitPlatform()
+}
